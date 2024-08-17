@@ -69,7 +69,7 @@ const Sidebar = () => {
                     <Link className="sidebar-link" href={link.route}>
                       <Image
                         src={link.icon}
-                        alt="logo"
+                        alt="logo_icon"
                         width={24}
                         height={24}
                         className={`${isActive && "brightness-200"}`}
