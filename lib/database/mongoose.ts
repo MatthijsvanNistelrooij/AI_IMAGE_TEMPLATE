@@ -16,8 +16,7 @@ if (!cached) {
   }
 }
 
-mongoose.set('debug', true);
-
+mongoose.set("debug", true)
 
 export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn
@@ -28,7 +27,7 @@ export const connectToDatabase = async () => {
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URL, {
-      dbName: "imagetemplate",
+      dbName: "AI_IMAGE_TEMPLATE",
       bufferCommands: false,
     })
 
