@@ -13,10 +13,10 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
 
   console.log("PROFILE", userId)
 
-  if (!userId) redirect("/sign-in");
+  // if (!userId) redirect("/sign-in");
 
-  const user = await getUserById(userId);
-  const images = await getUserImages({ page, userId: user._id });
+  // const user = await getUserById(userId);
+  // const images = await getUserImages({ page, userId: user._id });
 
 
   return (
