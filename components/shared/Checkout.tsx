@@ -59,7 +59,7 @@ const Checkout = ({
   };
 
   return (
-    <form action={onCheckout}>
+    <form action={onCheckout} method="POST">
       <section>
         <Button
           type="submit"

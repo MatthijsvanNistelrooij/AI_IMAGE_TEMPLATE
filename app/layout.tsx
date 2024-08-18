@@ -12,7 +12,7 @@ const IBMPLex = IBM_Plex_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "AI IMAGE TEMPLATE",
+  title: "Imagify",
   description: "AI Powered image generator",
 }
 

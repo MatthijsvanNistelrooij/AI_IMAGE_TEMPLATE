@@ -16,15 +16,19 @@ if (!cached) {
   }
 }
 
+mongoose.set('debug', true);
+
+
 export const connectToDatabase = async () => {
   if (cached.conn) return cached.conn
+  console.log("MONGODB_URL:", MONGODB_URL)
 
   if (!MONGODB_URL) throw new Error("Missing MONGODB_URL")
 
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URL, {
-      dbName: "AI_IMAGE_TEMPLATE",
+      dbName: "imagetemplate",
       bufferCommands: false,
     })
 

@@ -15,30 +15,30 @@ const Sidebar = () => {
       <div className="flex size-full flex-col gap-4">
         <Link href="/" className="sidebar-logo">
           <Image
-            className="m-4"
-            src="/assets/icons/logo.png"
+            className="ml-4"
+            src="/assets/images/logo-text.svg"
             alt="logo"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
           />
         </Link>
 
-        <nav className="sidebar-nav border border-red-400">
+        <nav className="sidebar-nav">
           <SignedIn>
-            <ul className="sidebar-nav_elements border border-red-400">
+            <ul className="sidebar-nav_elements">
               {navLinks.slice(0, 6).map((link) => {
                 const isActive = link.route === pathname
 
                 return (
                   <li
                     key={link.route}
-                    className={`border border-blue-400 ${
+                    className={`sidebar-nav_element group ${
                       isActive
                         ? "bg-purple-gradient text-white"
                         : "text-gray-400"
                     }`}
                   >
-                    <Link className="sidebar-link border border-green-400" href={link.route}>
+                    <Link className="sidebar-link" href={link.route}>
                       <Image
                         src={link.icon}
                         alt="logo"
@@ -69,7 +69,7 @@ const Sidebar = () => {
                     <Link className="sidebar-link" href={link.route}>
                       <Image
                         src={link.icon}
-                        alt="logo_icon"
+                        alt="logo"
                         width={24}
                         height={24}
                         className={`${isActive && "brightness-200"}`}
@@ -88,7 +88,7 @@ const Sidebar = () => {
 
           <SignedOut>
             <Button asChild className="button bg-purple-gradient bg-cover">
-              <Link href="/sign-in">LOGIN</Link>
+              <Link href="/sign-in">Login</Link>
             </Button>
           </SignedOut>
         </nav>
